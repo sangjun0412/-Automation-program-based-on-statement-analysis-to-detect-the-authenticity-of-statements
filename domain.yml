@@ -1,0 +1,103 @@
+actions:
+  - form_action_nickname
+  - form_action_start
+  - form_action_rapo1
+  - form_action_rapo2
+  - action_rapo3
+  - form_action_rapo4
+  - form_action_storystart
+  - form_action_response
+  - action_detail_date
+  - form_action_acquaintance
+  - form_action_number
+  - action_ask_banhang
+  - form_action_banhang
+  - action_ask_appearance
+  - form_action_next
+
+intents:
+  - start
+  - rapo
+  - rapo1
+  - rapo2
+  - attacker+indecent
+  - answering_banhang
+  - answering_emotion
+  - detaildate_reason
+  - numbering
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - location
+  - howmeeting
+  - saydetail_date
+  - sayclothed
+  - nextindecent2
+
+entities:
+  - 장소
+  - 횟수
+  - detail_date
+  - attacker
+  - clothed
+  - appearance
+  - indecent
+  - indecent2
+  - banhang1
+  - emotion
+  - requested_slot
+  - nextindecent
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  utter_ask_nickname:
+  - text: "사용하실 닉네임을 입력해주세요"
+  utter_default:
+  - text: "잘 못 알아들었어요! 다시 말씀해주실 수 있을까요?"
+  utter_fallback:
+  - text: "잘못입력하셨습니다"
+  utter_firstornot:
+  - text: "말씀해주셔서 감사합니다. 이런일이 혹시 한번 있었나요, 여러 번 있었나요?"
+  utter_start:
+  - text: "저와의 대화를 시작하시려면 '시작'을 입력해주세요"
+  utter_thanks:
+  - text: "대답해주셔서 감사합니다!"
+  utter_ask_detail_date:
+  - text: "언제 그런일이 있었나요??"
+  utter_ask_장소:
+  - text: "장소는 어디였나요?"
+  utter_ask_nextindecent:
+  - text: "그 이후에 있었던 일을 전부다 얘기 해주세요"
+slots:
+  attacker:
+    type: unfeaturized
+  indecent:
+    type: unfeaturized
+  nickname:
+    type: unfeaturized
+    auto_fill: false
+  횟수:
+    type: unfeaturized
+  clothed:
+    type: unfeaturized
+  banhang1:
+    type: unfeaturized
+  emotion:
+    type: unfeaturized
+    auto_fill: false
+  장소:
+    type: unfeaturized
+  detail_date:
+    type: unfeaturized
+  appearance:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  nextindecent:
+    type: unfeaturized
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
